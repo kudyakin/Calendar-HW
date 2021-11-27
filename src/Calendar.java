@@ -14,85 +14,36 @@ public class Calendar {
 
     public void addMessage(MonthOfYear month, String message) {
         switch (month) {
-            case January:
-                messages[0] = message;
-                break;
-            case February:
-                messages[1] = message;
-                break;
-            case March:
-                messages[2] = message;
-                break;
-            case April:
-                messages[3] = message;
-                break;
-            case May:
-                messages[4] = message;
-                break;
-            case June:
-                messages[5] = message;
-                break;
-            case July:
-                messages[6] = message;
-                break;
-            case August:
-                messages[7] = message;
-                break;
-            case September:
-                messages[8] = message;
-                break;
-            case October:
-                messages[9] = message;
-                break;
-            case November:
-                messages[10] = message;
-                break;
-            case December:
-                messages[11] = message;
-                break;
+            case January -> messages[0] = message;
+            case February -> messages[1] = message;
+            case March -> messages[2] = message;
+            case April -> messages[3] = message;
+            case May -> messages[4] = message;
+            case June -> messages[5] = message;
+            case July -> messages[6] = message;
+            case August -> messages[7] = message;
+            case September -> messages[8] = message;
+            case October -> messages[9] = message;
+            case November -> messages[10] = message;
+            case December -> messages[11] = message;
         }
     }
 
     public String getMessage(MonthOfYear month) {
-        String message = "";
-        switch (month) {
-            case January:
-                message = messages[0];
-                break;
-            case February:
-                message = messages[1];
-                break;
-            case March:
-                message = messages[2];
-                break;
-            case April:
-                message = messages[3];
-                break;
-            case May:
-                message = messages[4];
-                break;
-            case June:
-                message = messages[5];
-                break;
-            case July:
-                message = messages[6];
-                break;
-            case August:
-                message = messages[7];
-                break;
-            case September:
-                message = messages[8];
-                break;
-            case October:
-                message = messages[9];
-                break;
-            case November:
-                message = messages[10];
-                break;
-            case December:
-                message = messages[11];
-                break;
-        }
+        String message = switch (month) {
+            case January -> messages[0];
+            case February -> messages[1];
+            case March -> messages[2];
+            case April -> messages[3];
+            case May -> messages[4];
+            case June -> messages[5];
+            case July -> messages[6];
+            case August -> messages[7];
+            case September -> messages[8];
+            case October -> messages[9];
+            case November -> messages[10];
+            case December -> messages[11];
+        };
         return message;
     }
 
