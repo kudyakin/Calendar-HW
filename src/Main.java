@@ -3,6 +3,8 @@
 //Добавить возможность вывода строки-сообщения по месяцу.
 //Добавить возможность вывода списка выполненных задач к определенному месяцу.
 
+//добавить возможность сохранять значения в файле и восстанавливать из файла при запуске
+
 public class Main {
     public static void main(String[] args) {
     Calendar calendar = new Calendar();
@@ -23,8 +25,8 @@ public class Main {
 //        System.out.println(calendar.getMessage(MonthOfYear.August));
 //        System.out.println(calendar.getMessage(MonthOfYear.December));
 
+        calendar.restore();
         calendar.printAllMessagesByMonth(MonthOfYear.November);
-
-
+        calendar.save();
     }
 }
